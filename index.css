@@ -331,9 +331,11 @@ ul {
   padding-bottom: 0.75rem;
 }
 
+
+
 @media screen and (max-width: 800px) {
   .article-item {
-    max-height: 120px;
+    max-height: 100px;
     height: 100%;
   }
 
@@ -343,6 +345,13 @@ ul {
 
   .header {
     height: 52px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .article-item {
+    max-height: 150px;
+    height: 100%;
   }
 }
 
