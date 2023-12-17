@@ -68,9 +68,9 @@ closeBtn.addEventListener("click", () => {
   burgerBtn.style.display = "block";
 });
 
-const menuItems = document.querySelectorAll(".menu-item");
+const documentMenuItems = document.querySelectorAll(".menu-item");
 
-menuItems.forEach((item) => {
+documentMenuItems.forEach((item) => {
   const toggleBtn = item.querySelector(".menu-item__container");
 
   const dropdownMobile = item.querySelector(".dropdown-m");
@@ -79,7 +79,7 @@ menuItems.forEach((item) => {
     const arrow = item.querySelector(".down");
     const title = item.querySelector(".menu-item__h1");
 
-    menuItems.forEach((otherItem) => {
+    documentMenuItems.forEach((otherItem) => {
       const arrow = otherItem.querySelector(".down");
       const title = otherItem.querySelector(".menu-item__h1");
       const otherDropdownMobile = otherItem.querySelector(".dropdown-m");
