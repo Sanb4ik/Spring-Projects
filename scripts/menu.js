@@ -26,8 +26,8 @@ function createDropdownMenuForMobile(menuData) {
                 <h1 class="menu-item__h1">${menuData.title}</h1>
                 <button class="menu-item__arrow down"></button>
               </div>
-              <ul class="answer dropdown-m">
-                ${generateDropDownItems(menuData.items, "my-3", "answer-item dropdown-m__item" )}
+              <ul class="dropdown-m">
+                ${generateDropDownItems(menuData.items, "my-3", "dropdown-m__item" )}
               </ul>
             </article>
   `;
@@ -72,7 +72,6 @@ const documentMenuItems = document.querySelectorAll(".menu-item");
 
 documentMenuItems.forEach((item) => {
   const toggleBtn = item.querySelector(".menu-item__container");
-
   const dropdownMobile = item.querySelector(".dropdown-m");
 
   toggleBtn.addEventListener("click", function () {
@@ -82,9 +81,9 @@ documentMenuItems.forEach((item) => {
     documentMenuItems.forEach((otherItem) => {
       const arrow = otherItem.querySelector(".down");
       const title = otherItem.querySelector(".menu-item__h1");
-      const otherDropdownMobile = otherItem.querySelector(".dropdown-m");
-      if (otherDropdownMobile !== dropdownMobile && otherDropdownMobile.classList.contains("show")) {
-        otherDropdownMobile.classList.remove("show");
+      const otherAnswer = otherItem.querySelector(".dropdown-m");
+      if (otherAnswer !== dropdownMobile && otherAnswer.classList.contains("show")) {
+        otherAnswer.classList.remove("show");
         arrow.style.transform = "rotate(45deg)";
         title.style.color = "#ffffff";
       }
