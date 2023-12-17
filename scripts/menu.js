@@ -1,4 +1,4 @@
-import { menuItems } from "./constants";
+import { menuItems } from "./constants.js";
 
 function generateDropDownItems(items, liClass, aClass) {
   return items.map(

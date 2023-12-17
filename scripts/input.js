@@ -1,4 +1,4 @@
-import filterArticles from './articles'
+import filterArticles from './articles.js'
 let userInput = "";
 let timeoutId;
 

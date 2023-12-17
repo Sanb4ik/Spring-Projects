@@ -1,4 +1,4 @@
-import { articlesData } from "./constants";
+import { articlesData } from "./constants.js";
 
 function createArticles(articles) {
   const list = document.getElementById("list");
