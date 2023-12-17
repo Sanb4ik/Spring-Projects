@@ -23,7 +23,7 @@ function createArticles(articles) {
   });
 }
 
-export default function filterArticles() {
+export default function filterArticles(userInput) {
   const filteredArticles = articlesData.filter((item) => {
     return (
       item.description.toLowerCase().includes(userInput.toLowerCase()) ||

@@ -26,8 +26,8 @@ function createDropdownMenuForMobile(menuData) {
                 <h1 class="menu-item__h1">${menuData.title}</h1>
                 <button class="menu-item__arrow down"></button>
               </div>
-              <ul class="answer">
-                ${generateDropDownItems(menuData.items, "my-3", "answer-item" )}
+              <ul class="answer dropdown-m">
+                ${generateDropDownItems(menuData.items, "my-3", "answer-item dropdown-m__item" )}
               </ul>
             </article>
   `;
@@ -68,29 +68,29 @@ closeBtn.addEventListener("click", () => {
   burgerBtn.style.display = "block";
 });
 
-const faqItems = document.querySelectorAll(".menu-item");
+const menuItems = document.querySelectorAll(".menu-item");
 
-faqItems.forEach((item) => {
+menuItems.forEach((item) => {
   const toggleBtn = item.querySelector(".menu-item__container");
 
-  const answer = item.querySelector(".answer");
+  const dropdownMobile = item.querySelector(".dropdown-m");
 
   toggleBtn.addEventListener("click", function () {
     const arrow = item.querySelector(".down");
     const title = item.querySelector(".menu-item__h1");
 
-    faqItems.forEach((otherItem) => {
+    menuItems.forEach((otherItem) => {
       const arrow = otherItem.querySelector(".down");
       const title = otherItem.querySelector(".menu-item__h1");
-      const otherAnswer = otherItem.querySelector(".answer");
-      if (otherAnswer !== answer && otherAnswer.classList.contains("show")) {
-        otherAnswer.classList.remove("show");
+      const otherDropdownMobile = otherItem.querySelector(".dropdown-m");
+      if (otherDropdownMobile !== dropdownMobile && otherDropdownMobile.classList.contains("show")) {
+        otherDropdownMobile.classList.remove("show");
         arrow.style.transform = "rotate(45deg)";
         title.style.color = "#ffffff";
       }
     });
 
-    if (!answer.classList.contains("show")) {
+    if (!dropdownMobile.classList.contains("show")) {
       title.style.color = "#6cb52d";
       arrow.style.transform = "rotate(-135deg)";
     } else {
@@ -98,7 +98,7 @@ faqItems.forEach((item) => {
       title.style.color = "#ffffff";
     }
 
-    answer.classList.toggle("show");
+    dropdownMobile.classList.toggle("show");
   });
 });
 

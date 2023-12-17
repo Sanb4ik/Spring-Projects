@@ -410,7 +410,7 @@ ul {
   font-weight: 200;
 }
 
-.answer {
+.dropdown-m {
   border-top: 1px solid hsla(0, 0%, 100%, 0.4);
   display: block;
   overflow: hidden;
@@ -423,11 +423,11 @@ ul {
   margin-top: 1rem;
 }
 
-.answer-item:first-child {
+.dropdown-m__item:first-child {
   margin-top: 1rem;
 }
 
-.answer-item {
+.dropdown-m__item {
   font-weight: 300;
   font-size: 1.2rem;
   color: #98afae;
@@ -436,11 +436,11 @@ ul {
   margin-bottom: 1rem;
 }
 
-.answer-item:hover {
+.dropdown-m__item:hover {
   color: #6cb52d;
 }
 
-.answer.show {
+.dropdown-m.show {
   display: block;
   height: max-content;
   position: relative;

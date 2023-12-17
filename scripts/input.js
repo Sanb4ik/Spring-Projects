@@ -1,4 +1,5 @@
 import filterArticles from './articles.js'
+
 let userInput = "";
 let timeoutId;
 
@@ -8,5 +9,5 @@ searchInput.addEventListener("input", handleInputChange);
 function handleInputChange(event) {
   userInput = event.target.value;
   clearTimeout(timeoutId);
-  timeoutId = setTimeout(filterArticles, 300);
+  timeoutId = setTimeout(filterArticles(userInput), 300);
 }
