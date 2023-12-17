@@ -1,54 +1,5 @@
 import { menuItems } from "./constants.js";
 
-// function generateDropDownItems(items, liClass, aClass) {
-//   return items.map(
-//     (item) =>
-//       `<li class=${liClass}><a class=${aClass} href="${item.href}">${item.text}</a></li>`
-//   ).join("");
-// }
-//
-// function createDropdownMenu(menuData) {
-//   return `
-//     <div class="dropdown">
-//       <button class="drop-btn">${menuData.title}</button>
-//       <i class="arrow down"></i>
-//       <ul class="dropdown-content">
-//         ${generateDropDownItems(menuData.items, "", "dropdown-item" )}
-//       </ul>
-//     </div>
-//   `;
-// }
-//
-// function createDropdownMenuForMobile(menuData) {
-//   return `
-//             <article class="menu-item">
-//               <div class="menu-item__container">
-//                 <h1 class="menu-item__h1">${menuData.title}</h1>
-//                 <button class="menu-item__arrow down"></button>
-//               </div>
-//               <ul class="dropdown-m">
-//                 ${generateDropDownItems(menuData.items, "my-3", "dropdown-m__item" )}
-//               </ul>
-//             </article>
-//   `;
-// }
-//
-// function createMobileMenu() {
-//   const _menu = document.getElementById("menu-content");
-//   menuItems.forEach((menu) => {
-//     const dropdownHTML = createDropdownMenuForMobile(menu);
-//     _menu.insertAdjacentHTML("beforeend", dropdownHTML);
-//   });
-// }
-//
-// createMobileMenu();
-//
-// const dropdownContainer = document.getElementById("navbar-menu");
-// menuItems.forEach((menu) => {
-//   const dropdownHTML = createDropdownMenu(menu);
-//   dropdownContainer.insertAdjacentHTML("beforeend", dropdownHTML);
-// });
-
 function generateDropDownItems(items, liClass, aClass) {
   return items.map((item) => {
     const li = document.createElement("li");
